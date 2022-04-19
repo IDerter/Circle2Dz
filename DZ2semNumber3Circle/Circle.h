@@ -13,10 +13,21 @@ public:
 	void set_color(std::string);
 	std::string get_color();
 	const double PI = 3.141592653589793;
-	Circle(float valuerad,std::string valuecolor)
+	/*Circle()
+	{
+		rad = 5;
+		color = "Yellow";
+	}
+	*/
+	Circle(float valuerad = 4,std::string valuecolor = "Yellow")
 	{
 		rad = valuerad;
 		color = valuecolor;
+	}
+	Circle(const Circle &obj) //constructor copy
+	{
+		rad = obj.rad;
+		color = obj.color;
 	}
 	~Circle()
 	{
